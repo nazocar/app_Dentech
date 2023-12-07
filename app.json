@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "app_dentech",
+    "slug": "app_dentech",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo/dentechLogo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/logo/dentechLogo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#66F5DC"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo/dentechLogo.png",
+        "backgroundColor": "#66F5DC"
+      }
+    },
+    "web": {
+      "favicon": "./assets/logo/dentechLogo.png"
+    }
+  }
+}

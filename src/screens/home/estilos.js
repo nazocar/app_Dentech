@@ -3,7 +3,8 @@ import { StyleSheet } from "react-native";
 const estilo = StyleSheet.create({
     tela:{
         width: '100%',
-        height: '100%'
+        height: '100%',
+        backgroundColor: '#9DF9E8'
     },
 
     appbar:{
@@ -32,19 +33,30 @@ const estilo = StyleSheet.create({
         alignSelf: 'center'
     },
 
-    tituloInput:{
+    tituloInput1:{
         color: '#04BF9D',
         fontSize: 15,
         fontWeight: 'bold',
         fontFamily: 'Roboto',
-        alignSelf: 'center'
+        alignSelf: 'flex-start',
+        marginTop: 40
     },
+
+    tituloInput2:{
+        color: '#04BF9D',
+        fontSize: 15,
+        fontWeight: 'bold',
+        fontFamily: 'Roboto',
+        alignSelf: 'flex-start',
+        marginTop: 20
+    },
+
 
     input:{
         width: 300,
         height: 40,
         padding: 10,
-        marginTop: 30,
+        marginTop: 10,
 
         backgroundColor: '#FFF',
         borderColor: '#FFF',
@@ -55,7 +67,7 @@ const estilo = StyleSheet.create({
     botao:{
         width: 300,
         height: 40,
-        marginTop: 40,
+        marginTop: 30,
         alignItems: 'center',
 
         backgroundColor: '#002D37',
@@ -73,6 +85,7 @@ const estilo = StyleSheet.create({
     mostrarCards:{
         flexDirection: 'row',
         flexWrap: 'wrap',
+        marginTop: 30
     },
 
     card: {
@@ -82,7 +95,16 @@ const estilo = StyleSheet.create({
         margin: 10,
         justifyContent: 'center',
         alignItems: 'center',
+        marginTop: 10,
+        borderRadius: 15
       },
+
+      infoCard: {
+        color: '#FFF',
+        fontSize: 15,
+        fontWeight: 'bold',
+        fontFamily: 'Roboto'
+      }
 })
 
 export default estilo;

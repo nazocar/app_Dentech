@@ -28,7 +28,7 @@ function TelaLogin({navigation}){
                             setSenha(texto);
                         } } />
 
-                        <TouchableOpacity style={estilo.botao}>
+                        <TouchableOpacity style={estilo.botao} onPress={() => { navigation.navigate( "Home" ) } }>
                             <Text style={estilo.textbtn}>Entrar</Text>
                         </TouchableOpacity>
 

@@ -23,15 +23,15 @@ const TelaHome  = ({ navigation }) => {
                 <View style={estilo.container}>
                     <Text style={estilo.titulo}>Agendar Consulta</Text>
 
-                    <Text style={estilo.tituloInput}>Informe o mês</Text>
+                    <Text style={estilo.tituloInput1}>Informe o mês</Text>
 
                     <TextInput placeholder="Mês" style={estilo.input} keyboardType="numeric" onChangeText={(texto) => {
                             setMes(texto);
                         } } />
 
-                    <Text style={estilo.tituloInput}>Informe o ano</Text>
+                    <Text style={estilo.tituloInput2}>Informe o ano</Text>
 
-                    <TextInput style={estilo.input} keyboardType="numeric"  onChangeText={(texto) => {
+                    <TextInput placeholder="Ano" style={estilo.input} keyboardType="numeric"  onChangeText={(texto) => {
                         setAno(texto);
                     }} />
 
@@ -43,15 +43,21 @@ const TelaHome  = ({ navigation }) => {
                         <View style={estilo.mostrarCards}>
 
                             <View style={estilo.card}>
-                                <Text>Card 1</Text>
+                                <TouchableOpacity style={estilo.infoCard} onPress={() => { navigation.navigate( "EscolherServico" ) } }>
+                                    <Text style={estilo.infoCard}>infos</Text>
+                                </TouchableOpacity>
                             </View>
 
                             <View style={estilo.card}>
-                                <Text>Card 2</Text>
+                                <TouchableOpacity style={estilo.infoCard} onPress={() => { navigation.navigate( "EscolherServico" ) } }>
+                                    <Text style={estilo.infoCard}>infos</Text>
+                                </TouchableOpacity>
                             </View>
 
                             <View style={estilo.card}>
-                                <Text>Card 3</Text>
+                                <TouchableOpacity style={estilo.infoCard} onPress={() => { navigation.navigate( "EscolherServico" ) } }>
+                                    <Text style={estilo.infoCard}>infos</Text>
+                                </TouchableOpacity>
                             </View>
 
                         </View>

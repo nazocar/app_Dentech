@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity } from 'react-native';
 import estilo from './estilos.js';
 
 function TelaEscolherServico ({navigation}){

@@ -19,62 +19,72 @@ const estilo = StyleSheet.create({
         height: 41.322,
     },
 
+    containerTitulo:{
+        alignItems: 'center'
+    },
+
+    titulo:{
+        color: '#002D37',
+        marginTop: 30,
+        fontSize: 20,
+        fontWeight: 'bold',
+        fontFamily: 'Roboto',
+        justifyContent: 'center'
+    },
+
     container:{
-        width: '80%',
-        height: '75%',
-        marginTop: 100,
+        width: '72%',
+        marginTop: 30,
         alignSelf: "center",
-        backgroundColor: "#03BF9E",
-        borderRadius: 15
     },
 
-    infos: {
-        flexDirection: 'row',
-        padding: 40,
-        justifyContent: 'space-between'
+    infosContainer:{
+        backgroundColor: '#04BF9D',
+        borderRadius: 15,
+        padding: 15
     },
 
-    dado: {
+    tituloDado:{
         color: '#FFF',
         marginTop: 10,
         fontSize: 20,
         fontWeight: 'bold',
-        fontFamily: 'Roboto'
+        fontFamily: 'Roboto',
+        alignSelf: 'center'
     },
 
-    infoServico:{
-        alignItems: 'center',
-    },
-
-    titulo:{
+    dado1:{
         color: '#FFF',
-        marginTop: 15,
-        fontSize: 20,
+        marginTop: 30,
+        padding: 5,
+        fontSize: 16,
         fontWeight: 'bold',
-        fontFamily: 'Roboto'
+        fontFamily: 'Roboto',
+        justifyContent: 'flex-start'  
     },
 
-    descricao:{
+    dado2:{
         color: '#FFF',
-        marginTop: 15,
-        fontSize: 20,
-        fontWeight: 'regular',
-        fontFamily: 'Roboto'
+        padding: 5,
+        fontSize: 16,
+        fontWeight: 'regularc',
+        fontFamily: 'Roboto',
+        justifyContent: 'flex-start'  
     },
 
     botao:{
-        width: 300,
-        height: 40,
-        marginTop: 30,
-        alignSelf: 'center',
-
-        backgroundColor: '#002D37',
-        borderRadius: 20,
+       width: 255,
+       height: 35,
+       marginTop: 60,
+       padding: 10,
+       backgroundColor: '#019B7F',
+       borderRadius: 20,
+       alignSelf: 'center'
     },
 
     textbtn:{
         color: '#FFF',
-        marginTop: 10,
+        marginTop: -2,
         fontSize: 15,
         fontWeight: 'bold',
         fontFamily: 'Roboto',
@@ -89,6 +99,8 @@ const estilo = StyleSheet.create({
         fontWeight: 'bold',
         fontFamily: 'Roboto'
     }
+
+
 
 })
 

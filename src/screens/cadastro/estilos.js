@@ -14,7 +14,7 @@ const estilo = StyleSheet.create({
     appbar:{
         width: '100%',
         alignItems: 'flex-end',
-        marginTop: 30,
+        marginTop: 5,
         padding: 10
     },
 
@@ -73,14 +73,14 @@ const estilo = StyleSheet.create({
         fontFamily: 'Roboto'
     },
 
-    // link:{
-    //     color: '#002D37',
-    //     alignSelf: 'center',
-    //     marginTop: 10,
-    //     fontSize: 15,
-    //     fontWeight: 'bold',
-    //     fontFamily: 'Roboto'
-    // }
+    link:{
+        color: '#002D37',
+        alignSelf: 'center',
+        marginTop: 10,
+        fontSize: 15,
+        fontWeight: 'bold',
+        fontFamily: 'Roboto'
+    }
 });
 
 export default estilo;

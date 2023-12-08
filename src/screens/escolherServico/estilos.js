@@ -10,7 +10,7 @@ const estilo = StyleSheet.create({
     appbar:{
         width: '100%',
         alignItems: 'flex-end',
-        marginTop: 30,
+        marginTop: 5,
         padding: 10
     },
 

@@ -41,7 +41,7 @@ function TelaConfirmarConsulta ({navigation}){
                     <Text style={estilo.textbtn}>Agendar</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={estilo.link} onPress={() => { navigation.navigate( "Home" ) } }>
+                <TouchableOpacity style={estilo.link} onPress={() => { navigation.navigate( "EscolherServico" ) } }>
                     <Text style={estilo.link}>Voltar</Text>
                 </TouchableOpacity>
                 

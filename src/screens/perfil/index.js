@@ -6,11 +6,12 @@ import estilo from './estilos.js';
 function TelaPerfil ({navigation}){
 
     return(
-        <SafeAreaView>
+        <SafeAreaView style={estilo.tela}>
             <ScrollView>
-                <View>
-                    
-                </View>
+                <View style={estilo.appbar}>
+                        <Image style={estilo.logo} source={require('../../../assets/logo/dentechLogo.png')} />
+                    </View>
+        
 
                 <View style={estilo.container} >
                     <Text style ={estilo.nome}>Nome</Text>
@@ -18,8 +19,9 @@ function TelaPerfil ({navigation}){
                     onChangeText={(texto) => {
                         setNome(texto);
                     } }
-                   
                     />
+
+                    
                     <Text style ={estilo.sobrenome}>Sobreome</Text>
                     <TextInput style= {estilo.input}
                    
@@ -31,7 +33,22 @@ function TelaPerfil ({navigation}){
                     
                     <TouchableOpacity style={estilo.botao}>
                             <Text style={estilo.textbtn}>Editar perfil</Text>
-                        </TouchableOpacity>
+                    </TouchableOpacity>
+
+        
+                    <TouchableOpacity style={estilo.link} onPress={() => { navigation.navigate( "EnviarEmailPerfil" ) } }>
+                        <Text style={estilo.link}>Redefinir senha</Text>
+                    </TouchableOpacity>
+
+                
+
+                    <TouchableOpacity style={estilo.botaoexcluir}>
+                            <Text style={estilo.textbtn}>Excluir conta</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={estilo.link} onPress={() => { navigation.navigate( "Home" ) } }>
+                        <Text style={estilo.link}>Voltar</Text>
+                    </TouchableOpacity>
                 </View>
 
 

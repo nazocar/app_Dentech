@@ -38,7 +38,7 @@ function TelaLogin({navigation}){
 
                         <View style={estilo.divisor}>
                             <View style={estilo.linha}></View>
-                            <Text style={estilo.txtDivisor}>ou</Text>
+                            <Text style={estilo.txtDivisor}>o   u</Text>
                             <View style={estilo.linha}></View>
                         </View>
 

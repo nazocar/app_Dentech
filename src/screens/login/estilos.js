@@ -4,7 +4,6 @@ const estilo = StyleSheet.create({
     tela:{
         width: '100%',
         height: '100%',
-        backgroundColor: '#53C5D1'
     },
 
     gradient:{

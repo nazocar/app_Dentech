@@ -14,6 +14,9 @@ function TelaPerfil ({navigation}){
         
 
                 <View style={estilo.container} >
+
+                    <Image style={estilo.fotoPerfil} source={require('../../../assets/perfil.png')}></Image>
+                    
                     <Text style ={estilo.nome}>Nome</Text>
                     <TextInput style= {estilo.input}
                     onChangeText={(texto) => {

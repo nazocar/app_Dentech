@@ -120,6 +120,7 @@ const estilo = StyleSheet.create({
         fontSize: 15, 
         fontWeight: 'bold',
         marginLeft: 15,
+        
 
     },     
     sobrenome:{
@@ -137,7 +138,14 @@ const estilo = StyleSheet.create({
         fontWeight: 'bold',
         marginLeft: 15,
 
-    },     
+    },    
+    
+    fotoPerfil:{
+        width: 105,
+        height: 105,
+        alignSelf: 'center',
+        marginTop: -30
+    }
 
 });
 

@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 const estilo = StyleSheet.create({
     tela:{
+        flex: 1,
         width: '100%',
         height: '100%',
         backgroundColor: '#9DF9E8'
@@ -74,29 +75,48 @@ const estilo = StyleSheet.create({
         borderRadius: 20,
     },
 
+    btnConsulta:{
+        width: 230,
+        height: 40,
+        marginTop: 30,
+        alignItems: 'center',
+
+        backgroundColor: '#002D37',
+        borderRadius: 20,
+    },
+
     textbtn:{
         color: '#FFF',
-        marginTop: 10,
+        marginTop: 5,
         fontSize: 15,
         fontWeight: 'bold',
         fontFamily: 'Roboto'
     },
 
     mostrarCards:{
+        width: '100%',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        marginTop: 30
+        marginTop: 50,
+        flex: 1
     },
 
     card: {
-        width: 100,
-        height: 100,
+        width: '100',
+        height: 250,
         backgroundColor: '#03BF9E',
         margin: 10,
-        justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 10,
-        borderRadius: 15
+        marginTop: 20,
+        borderRadius: 15,
+        padding: 30
+      },
+
+      tituloCard: {
+        color: '#FFF',
+        fontSize: 25,
+        fontWeight: 'bold',
+        fontFamily: 'Roboto'
       },
 
       infoCard: {
@@ -104,7 +124,21 @@ const estilo = StyleSheet.create({
         fontSize: 15,
         fontWeight: 'bold',
         fontFamily: 'Roboto'
+      },
+
+      listContainer: {
+        flexGrow: 1,
+        justifyContent: 'center',
+        marginTop: 50,
+        alignItems: "center"
+      },
+
+      tituloHorario: {
+        fontSize: 25,
+        fontWeight: 'bold',
+        fontFamily: 'Roboto'
       }
+
 })
 
 export default estilo;

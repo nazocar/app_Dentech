@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity, TextInput, Alert } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import estilo from './estilos.js';
+import login from '../../api/login.js'
 
 function TelaLogin({navigation}){
 
     //Variáveis de login
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+
+    async function handleAsyncStorage(dados, token){
+        // Armazenado valor no Async storage
+        const dadosUser = JSON.stringify(dados);
+        const tokenUser = JSON.stringify(token);
+        await AsyncStorage.setItem('dados', dadosUser);
+        await AsyncStorage.setItem('token', tokenUser);
+    };
 
     return(
         <SafeAreaView style={estilo.tela}>
@@ -28,7 +38,25 @@ function TelaLogin({navigation}){
                             setSenha(texto);
                         } } />
 
-                        <TouchableOpacity style={estilo.botao} onPress={() => { navigation.navigate( "Home" ) } }>
+                        <TouchableOpacity style={estilo.botao} onPress={async () => { 
+
+                            // Realizando login
+                            const resultado = await login({email, senha});
+
+                            Alert.alert("Mensagem", resultado.msg);
+
+                            if (resultado.status === "success") {
+
+                                
+                                await handleAsyncStorage(resultado.dados, resultado.token);
+
+                                const dados = await AsyncStorage.getItem('dados');
+
+                                console.log(dados);
+
+                                navigation.navigate( "Home" );
+                            }
+                        } }>
                             <Text style={estilo.textbtn}>Entrar</Text>
                         </TouchableOpacity>
 

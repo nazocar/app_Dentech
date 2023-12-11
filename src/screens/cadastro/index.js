@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity, TextInput, Alert } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import estilo from './estilos.js';
+import Clientes from '../../api/Clientes.js';
 
 
 function TelaCadastro({navigation}){
+
 
     const [nome, setNome] = useState('');
     const [sobrenome, setSobrenome] = useState('');
@@ -43,7 +45,18 @@ function TelaCadastro({navigation}){
                             setConfirmar(texto);
                         } } />
 
-                        <TouchableOpacity style={estilo.botao}>
+                        <TouchableOpacity style={estilo.botao} onPress={async () => {
+
+                            if(senha !== confirmar) return Alert.alert("As senhas não correspondem.");
+
+                            // Salvando os dados
+                            const cliente = new Clientes(nome, sobrenome, email, senha);
+
+                            const cadastro = await cliente.cadastrar();
+
+                            return Alert.alert("Mensagem:", `${cadastro.msg}`);
+
+                        }}>
                             <Text style={estilo.textbtn}>Cadastrar</Text>
                         </TouchableOpacity>
 

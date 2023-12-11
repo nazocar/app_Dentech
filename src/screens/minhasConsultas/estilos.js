@@ -65,10 +65,11 @@ const estilo = StyleSheet.create({
 
     botaoConsulta:{
         width: 331.4,
-        height: 85,
+        height: 220,
         backgroundColor: '#00A488',
         borderRadius: 15,
-        marginTop: 25
+        marginTop: 25,
+        padding: 15,
     },
 
     row1:{
@@ -79,7 +80,7 @@ const estilo = StyleSheet.create({
 
     dado1:{
         color: '#FFF',
-        fontSize: 15,
+        fontSize: 25,
         fontWeight: 'bold',
         fontFamily: 'Roboto'
     },
@@ -94,10 +95,28 @@ const estilo = StyleSheet.create({
         fontSize: 15,
         fontWeight: 'bold',
         fontFamily: 'Roboto',
+    },
+
+    listContainer: {
+        flexGrow: 1,
+        justifyContent: 'center',
+        marginTop: 50,
+        alignItems: "center"
+    },
+
+    btnCancelar: {
+        width: '100',
+        backgroundColor: 'red',
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 15,
+        margin: 20
+    },
+
+    btnCancelarTxt: {
+        color: "white",
+        fontWeight: "bold"
     }
-
-    
-
 
 
 })
